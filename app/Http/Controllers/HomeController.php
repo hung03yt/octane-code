@@ -68,4 +68,8 @@ class HomeController extends Controller
             'movies' => $movies
         ]);
     }
+
+    public function dashBoard() {
+        return view('welcome');
+    }
 }

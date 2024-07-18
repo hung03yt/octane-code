@@ -20,16 +20,32 @@
                 <p class="movie_synopsis">{{$movie["synopsis"]}}</p>
             </div>
             <div class="col-4 text-center d-lg-block d-none">
-                <div class="rating" id="star-rating">
-                    @for ($i = 1; $i <= 5; $i++)
-                        <i class="bi bi-star" data-value="{{ $i }}"></i>
-                    @endfor
+                <div class="total_rating">
+                    <h4>Viewer rating:</h4>
+                    <i class="bi bi-star-fill" style="font-size: 3rem; color: gold"></i>
+                    @php
+                        $averageRating = $movie->ratings->avg('rate_value');
+                        $formattedRating = number_format($averageRating, 1);
+                    @endphp
+                    <h4>{{$formattedRating}}</h4>
+                </div>
+                <div class="rating mt-2" id="star-rating">
+                    @auth
+                        @for ($i = 1; $i <= 5; $i++)
+                            <i class="bi bi-star" data-value="{{ $i }}"></i>
+                        @endfor
+                    @else
+                        <div class="text_center">
+                            <h4>Login to rate this movie</h4>
+                        </div>
+                    @endauth
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Review Modal -->
+    @auth
     <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -52,6 +68,7 @@
             </div>
         </div>
     </div>
+    @endauth
     <hr>
     <h3 class="ms-5">Reviews</h3>
     <table class="table ms-5">
@@ -66,7 +83,7 @@
         @if($ratings->count() > 0)
             @foreach($ratings as $rating)
             <tr>
-                <td>{{$rating->user->name }}</td>
+                <td>{{$rating->user->name}}</td>
                 <td>{{$rating->rate_value}}</td>
                 <td>{{$rating->review}}</td>
             </tr>
