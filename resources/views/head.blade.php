@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
 <link rel="stylesheet" href="{{ asset('css/recommended.css') }}">
 <link rel="stylesheet" href="{{ asset('css/rating.css') }}">
+<link rel="stylesheet" href="{{ mix('css/app.css') }}">
 <style>
     .hidden {
         display: none;
