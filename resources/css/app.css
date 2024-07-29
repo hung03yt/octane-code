@@ -1,3 +1,11 @@
+@import 'sidebar.css';
+@import 'recommended.css';
+@import 'rating.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hidden {
+    display: none;
+}

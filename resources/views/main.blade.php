@@ -9,8 +9,6 @@
 
 <body>
 
-<div id="app"></div>
-
 @include('header')
 
 @yield('content')

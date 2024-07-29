@@ -1,0 +1,20 @@
+.rating {
+    unicode-bidi: bidi-override;
+    font-size: 2rem;
+}
+
+.rating > .bi {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+    cursor: pointer;
+}
+
+.rating > .bi:hover,
+.rating > .bi:hover ~ .bi {
+    color: gold;
+}
+
+.rating > .bi.bi-star-fill {
+    color: gold;
+}

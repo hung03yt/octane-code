@@ -9,14 +9,14 @@
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="MovieCover/60/good_imge.png" class="d-block w-100" alt="First slide" height="550px">
+                            <img src="MovieCover/60/good_imge.png" class="d-block w-100" alt="First slide" style="height: 550px">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Some representative placeholder content for the first slide.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="image/square.jpg" class="d-block w-100" alt="Second slide" height="550px">
+                            <img src="image/square.jpg" class="d-block w-100" alt="Second slide" style="height: 550px">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Some representative placeholder content for the first slide.</p>
